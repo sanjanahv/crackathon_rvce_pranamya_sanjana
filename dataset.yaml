@@ -1,0 +1,11 @@
+path: /kaggle/input/crackathon-data/randomized_dataset
+train: train/images
+val: val/images
+
+nc: 5
+names:
+  - Longitudinal Crack
+  - Transverse Crack
+  - Alligator Crack
+  - Other Corruption
+  - Pothole
