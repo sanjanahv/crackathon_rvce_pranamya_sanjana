@@ -12,7 +12,7 @@ model = YOLO(OLD_WEIGHTS_PATH)
 # Train / refine model
 model.train(
     data=DATA_YAML,
-    epochs=100,
+    epochs=50,
     imgsz=800,
     batch=-1,
     patience=20,
