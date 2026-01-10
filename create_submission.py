@@ -1,15 +1,15 @@
 import os
 import zipfile
 
-labels_path = "predictions/test_results/labels"
-zip_name = "submission.zip"
+# Source of your new labels
+labels_path = '/kaggle/working/predictions/test_results/labels'
+zip_name = 'submission.zip'
 
-with zipfile.ZipFile(zip_name, "w") as zipf:
+with zipfile.ZipFile(zip_name, 'w') as zipf:
     for file in os.listdir(labels_path):
-        if file.endswith(".txt"):
-            zipf.write(
-                os.path.join(labels_path, file),
-                arcname=os.path.join("predictions", file)
-            )
+        if file.endswith('.txt'):
+            # This nests the files inside a folder named 'predictions' inside the zip
+            zipf.write(os.path.join(labels_path, file),
+                       arcname=os.path.join('predictions', file))
 
-print("submission.zip created successfully")
+print("Final submission.zip created successfully!")
